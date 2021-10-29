@@ -20,9 +20,12 @@
 
 // 惰性匹配
 
-// const regex = /\d{2,5}?/g
-// const string = "123 1234 12345 123456"
-// console.log(string.match(regex));
+const regex = /^\d+(.*?)\d+$/g
+const string = "123 1234 12345 123456"
+// const string = "1aaa11"
+console.log(regex.exec(string));
+// string.match(regex)
+// console.log(RegExp.$1, 'sfjksdjf');
 
 // 多选分支
 
@@ -102,6 +105,6 @@
 
 // 效率低 可以这样优化 设计回溯
 
-var regex = /id="[^"]*"/
-var string = '<div id="container" class="main"></div>';
-console.log(string.match(regex)[0]);
+// var regex = /id="[^"]*"/
+// var string = '<div id="container" class="main"></div>';
+// console.log(string.match(regex)[0]);
