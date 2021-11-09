@@ -180,10 +180,16 @@
 // console.log( unescapeHTML('&lt;div&gt;Blah blah blah&lt;/div&gt;') );
 
 // 匹配成对标签
-var regex = /<([^>]+)>[\d\D]*<\/\1>/;
-var string1 = "<title>regular expression</title>";
-var string2 = "<p>laoyao bye bye</p>";
-var string3 = "<title>wrong!</p>";
-console.log( regex.test(string1) ); // true
-console.log( regex.test(string2) ); // true
-console.log( regex.test(string3) ); // false
+// var regex = /<([^>]+)>[\d\D]*<\/\1>/;
+// var string1 = "<title>regular expression</title>";
+// var string2 = "<p>laoyao bye bye</p>";
+// var string3 = "<title>wrong!</p>";
+// console.log( regex.test(string1) ); // true
+// console.log( regex.test(string2) ); // true
+// console.log( regex.test(string3) ); // false
+
+// 惰性量词
+var string = "12345";
+var regex = /^(\d{1,3}?)(\d{1,3})$/;
+console.log( string.match(regex) );
+// => ["1234", "1", "234", index: 0, input: "12345"]
